@@ -9,7 +9,6 @@ func main() {
 	var nums = 5
 	var client = "agag"
 	var ret = fmt.Sprintf("msg:%s//code:%d", client, my_lib.Rminus(nums, nums))
-	nums = "555"
 	fmt.Println(ret)
 
 }
