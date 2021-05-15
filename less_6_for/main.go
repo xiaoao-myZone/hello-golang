@@ -5,45 +5,20 @@ import (
 )
 
 func main() {
-	var t int = 56
-	fmt.Println(t)
-	// case-1
-	switch t {
-	case 55:
-		{
-
-			fmt.Println("this is 55")
-		}
-	case 56:
-		fallthrough
-		// {
-		// 	fmt.Println("this is 56")
-		// 	fmt.Println("this is *56*")
-		// 	// fallthrough
-		// }
-		// return
-
-	case 57:
-		fmt.Println("this is 57")
-	default:
-		fmt.Println("this is a num above 57")
+	var s, i int
+	s, i = 5, 0
+	s += i
+	for j := 0; j < s; j++ {
+		fmt.Println("this is circle -->", j)
 	}
-
-	// case-2
-	switch {
-	case t <= 100:
-		fmt.Println("less than 100")
-	case t <= 200:
-		fmt.Println("less than 200")
-	default:
-		fmt.Println("greater than 200")
-
-	}
-
+	// else:
+	// 	fmt.Println("end else")
+	// fmt.Println(j)
 }
 
 /*
 Conclusion:
-	1. 如何理解fallthrough, 貌似只能作为一个case的唯一一行语句
-	2. 但是fallthrough可以在不写{}是加入到case之间,如果加在命中的case后, 会使程序无脑执行下一个case
+	1. 整体上和C差不多, 指示少了一对括号
+	2. go 继承C的精髓, ++和=+
+	3. 不能像python一样用for-else, 略微遗憾
 */

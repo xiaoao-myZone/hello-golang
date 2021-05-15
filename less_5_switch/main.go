@@ -44,6 +44,6 @@ func main() {
 
 /*
 Conclusion:
-	1. 如何理解fallthrough, 貌似只能作为一个case的唯一一行语句
+	1. 如何理解fallthrough, 貌似只能作为一个case的唯一一行语句 TODO
 	2. 但是fallthrough可以在不写{}是加入到case之间,如果加在命中的case后, 会使程序无脑执行下一个case
 */
