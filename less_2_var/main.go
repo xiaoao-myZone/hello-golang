@@ -24,3 +24,9 @@ func main() {
 	fmt.Printf("%v\n", chars)              // xiaoao, so %+v is same as %v
 	// TODO 类型间如何转化?
 }
+
+/*
+Conclusion:
+	1. %#v 可以输出变量的类型
+	2. %v与%+v感觉差不多
+*/
