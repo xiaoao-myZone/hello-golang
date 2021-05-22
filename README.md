@@ -3,8 +3,8 @@
 
 ## questions
 1. 什么是引用类型, 与之并列的还有什么类型?
-
 2. new与make
+3. 对于结构体, 结构体指针和结构体本身都可以用s.val来调用属性, 这TM太奇怪了
 
 
 ## recommendations from The Way to Go

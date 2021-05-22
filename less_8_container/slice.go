@@ -27,6 +27,10 @@ func main() {
 	s_2 = append(s_2, 77, 88, 99, 10)
 	fmt.Println("len of s_2:", len(s_2)) // len is 5
 	fmt.Println("cap of s_2:", cap(s_2)) // cap is 8
+	fmt.Println("s_1[:0]:", s_1[:1])
+	fmt.Println(s_2)
+	s_2 = append(s_2, s_1[:0]...)
+	fmt.Println(s_2)
 }
 
 /*
@@ -37,4 +41,5 @@ Conclusion:
 	4. 切片是一个结构体, 包含数组指针(切片开始位置?), 长度, 和最大长度信息
 	5. 切片的容量不等于其相关数组的最大长度, 并且, 切片无法对超出其长度的索引做处理, 会报错, 那知道容量的意义在哪?
 	6. 当cap==len时 ,调用append, 会使cap变为原来的两倍
+	7. 无法这样创建分片 var nums []int {1,2,3,4}
 */
