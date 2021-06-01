@@ -31,6 +31,14 @@ func main() {
 	fmt.Println(s_2)
 	s_2 = append(s_2, s_1[:0]...)
 	fmt.Println(s_2)
+
+	fmt.Println("*******************")
+	s_3 := []int{1, 2, 3, 4, 5}
+	fmt.Printf("%p\n", &s_3)
+	s_3 = append(s_3[:1], s_3[2:]...)
+	fmt.Println(s_3)
+	fmt.Printf("%p\n", &s_3)
+	// fmt.Println(s_3[2:100]) not ok
 }
 
 /*
@@ -42,4 +50,7 @@ Conclusion:
 	5. 切片的容量不等于其相关数组的最大长度, 并且, 切片无法对超出其长度的索引做处理, 会报错, 那知道容量的意义在哪?
 	6. 当cap==len时 ,调用append, 会使cap变为原来的两倍
 	7. 无法这样创建分片 var nums []int {1,2,3,4}
+	8. 切片扩容后与原内置数组之间的关系 TODO
+	9. 切片的其他操作 https://blog.csdn.net/fyxichen/article/details/46622763
+	10. 对slice而言, length很可能是一个属性, 在slice建立之初就创建了, len只是调用这个属性
 */

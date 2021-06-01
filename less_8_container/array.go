@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
@@ -33,7 +34,7 @@ func main() {
 		fmt.Println(dss[i])
 	}
 
-	slides := arr[:] // 这个切片操作和python相同
+	slides := arr[:] // 这个切片操作和python相同, 如果不存在将返回空切片, 前提是:前后的索引不可以超出最大长度
 	fmt.Println(slides)
 
 	var d_arr [2][2]int
@@ -43,6 +44,11 @@ func main() {
 			fmt.Println("j-->", d_arr[i][j])
 		}
 	}
+
+	fmt.Println("*******************")
+	ss := []int{5, 3, 4, 1}
+	sort.Ints(ss)
+	fmt.Println(ss)
 }
 
 func initArr1(arr [8]int) {

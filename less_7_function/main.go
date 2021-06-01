@@ -18,6 +18,16 @@ func main() {
 	k, v = getTwoNum(num)
 	k, v, s = getTriNum()
 	fmt.Println(k, v, s)
+	m, n := getMap()
+	fmt.Println(m, n)
+	p, q := getSlice()
+	fmt.Println(p, q)
+	fmt.Printf("%#v\n", p)
+	if p == nil {
+		fmt.Println("It's nil")
+	} else {
+		fmt.Println("It's not nil")
+	}
 }
 
 func getTwoNum(input int) (int, int) {
@@ -35,6 +45,15 @@ func getTriNum() (num1 int, num2 int, num3 int) {
 
 }
 
+func getMap() (map[int]int, bool) {
+	return nil, false
+}
+
+func getSlice() ([][]int, bool) {
+	return nil, false
+	// return [][]int{}, false
+}
+
 /*
 Conclusion:
 	1. 可以先使用后定义
@@ -46,4 +65,6 @@ Conclusion:
 	7. 对于5, 可以在函数体中只写return, 这样就获得了在申明中定义的返回值的初值
 	8. TODO 变长参数
 	9. TODO defer 与 finally
+	10. nil可作为array, slice, map的返回值, 返回值会被自动当转化为对应的空对象, 不过是nil还是空的容器, 可以通过r==nil判断
+	11. array, slice, map做参数传递时, 可以理解为传递的是指针
 */
