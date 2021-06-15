@@ -1,6 +1,7 @@
 # hello-golang
 
-
+## tutorial
+1. [Go语言中文网](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/chapter03/03.1.html)
 ## questions
 1. 什么是引用类型, 与之并列的还有什么类型?
 2. new与make
@@ -18,3 +19,5 @@
 3. go面向对象的特点偏弱, 数组, 切片和map没有自己的方法, 只能用內建函数去操作
 4. 函数(包括map的检索)一般都有两个返回值, 但是当你用一个值去接受时, 只会得到前面的值,后一个值代表操作是否成功
 5. 数组在声明的时候就被初始化了, 而map在声明后还需要初始化
+
+
