@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	i, j := 1, 1
 	if true {
 		fmt.Println("lalla")
 	} else if true { // else 不能换行
@@ -19,5 +20,14 @@ func main() {
 		fmt.Println("No")
 	}
 
+	if i = i + j; j > 0 {
+		fmt.Println(i, j)
+	}
+
 	// fmt.Println(cons) cons is just valid in if - else
 }
+
+/*
+Conclusion:
+	1. if [expression;] bool expression {} [else]
+*/

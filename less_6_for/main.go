@@ -36,4 +36,5 @@ Conclusion:
 	3. 不能像python一样用for-else, 略微遗憾
 	4. for啥也不加相当于while True
 	5. for与range结合， 可以很简明地遍历切片与字典
+	6. for [expression;] [expression;] [expression] {} 貌似不适用与range
 */
