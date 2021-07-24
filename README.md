@@ -2,6 +2,7 @@
 
 ## tutorial
 1. [Go语言中文网](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/chapter03/03.1.html)
+2. [网页端运行go](https://tour.golang.org/welcome/1)
 ## questions
 1. 什么是引用类型, 与之并列的还有什么类型?
 2. new与make

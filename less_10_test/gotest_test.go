@@ -11,9 +11,9 @@ type pairs struct {
 func Test_Division(t *testing.T) {
 	test_case := []pairs{
 		{
-			1,
-			2,
-			0,
+			dividend: 1,
+			divisor:  2,
+			res:      0,
 		},
 		{
 			10,

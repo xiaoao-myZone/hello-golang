@@ -4,6 +4,13 @@ import "fmt"
 
 func main() {
 	fmt.Println("hello, wolrd!")
+	fmt.Println(5 / 2)
+	a, b := 0, 1
+	a, b = b, a
+	fmt.Println(a, b)
+	s := "1254a"
+	fmt.Println(s[0] > 'a')
+	fmt.Printf("%v\n", s[0])
 }
 
 /*
