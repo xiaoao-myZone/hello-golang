@@ -44,6 +44,8 @@ func main() {
 
 /*
 Conclusion:
-	1. 如何理解fallthrough, 貌似只能作为一个case的唯一一行语句 TODO
-	2. 但是fallthrough可以在不写{}是加入到case之间,如果加在命中的case后, 会使程序无脑执行下一个case
+	1. switch 后的参数是否只能整型?
+	2. 命中了一个case后, 是否会执行其他case
+	3. 如何理解fallthrough, 貌似只能作为一个case的唯一一行语句 TODO
+	4. 但是fallthrough可以在不写{}是加入到case之间,如果加在命中的case后, 会使程序无脑执行下一个case
 */

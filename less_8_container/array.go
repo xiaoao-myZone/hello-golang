@@ -49,6 +49,30 @@ func main() {
 	ss := []int{5, 3, 4, 1}
 	sort.Ints(ss)
 	fmt.Println(ss)
+
+	// 切片的地址问题
+	fmt.Println("********切片的地址问题***********")
+	new := []int{1, 2, 3}
+	new_p := []*int{}
+	for _, i := range new {
+		new_p = append(new_p, &i)
+		fmt.Printf("%p\n", &i)
+		fmt.Println(*(&i)) // 仿佛这个地址受上下文的影响
+	}
+	for _, i := range new_p {
+		fmt.Println(*i)
+	}
+
+	// 操作切片的接口
+	fmt.Println("********操作切片的接口***********")
+	fmt.Printf("ss的地址: %p\n", &ss)
+	ss = append(ss, 100)
+	ss = append(ss, 101, 102, 103)
+	addition := []int{7, 8}
+	ss = append(ss, addition...)
+	fmt.Printf("append操作后ss的地址: %p\n", &ss)
+	fmt.Println(ss)
+
 }
 
 func initArr1(arr [8]int) {
@@ -72,4 +96,7 @@ func initArr2(arr_p *[8]int) {
 Conclusion:
 	1. 数组更像python的容器类型, 因为它可以存放不同类型的数据(但是一个数组只有一种数据)
 	2. 数组初始化后, 长度貌似无法改变
+	3. 切片中每个元素的地址都是一样的, 但是在上下文中可以通过同样的地址复原出对应的值
+	4. 切片的赋值是复制, 这个与python不一样
+	5. append(slice, ele_1, ele_2, ...)或者append(slice, slice_1...)
 */
