@@ -28,6 +28,11 @@ func main() {
 	} else {
 		fmt.Println("It's not nil")
 	}
+
+	fmt.Println("*******不定参数输出*******")
+	fmt.Println(join("hell", "o, wor", "ld", "!"))
+	arr := []string{"hell", "o, wor", "ld", "!"}
+	fmt.Println(join(arr...))
 }
 
 func getTwoNum(input int) (int, int) {
@@ -54,6 +59,13 @@ func getSlice() ([][]int, bool) {
 	// return [][]int{}, false
 }
 
+func join(arr ...string) string {
+	for _, str := range arr[1:] {
+		arr[0] += str
+	}
+	return arr[0]
+}
+
 /*
 Conclusion:
 	1. 可以先使用后定义
@@ -67,4 +79,5 @@ Conclusion:
 	9. TODO defer 与 finally
 	10. nil可作为array, slice, map的返回值, 返回值会被自动当转化为对应的空对象, 不过是nil还是空的容器, 可以通过r==nil判断
 	11. array, slice, map做参数传递时, 可以理解为传递的是指针
+	12. ...非常类似于python中的*
 */

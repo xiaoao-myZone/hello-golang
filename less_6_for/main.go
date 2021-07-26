@@ -24,6 +24,7 @@ func main() {
 	for index, val := range list {
 		fmt.Println(index, val)
 	}
+
 	// else:
 	// 	fmt.Println("end else")
 	// fmt.Println(j)
