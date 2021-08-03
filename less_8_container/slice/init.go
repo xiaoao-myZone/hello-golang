@@ -7,6 +7,8 @@ func main() {
 	var s2 []int
 	s3 := []int{}
 	s4 := make([]int, 7)
+	p := 5
+	s5 := make([]int, p) //可以用变量
 	fmt.Printf("s1: %#v\n", s1)
 	fmt.Printf("s2: %#v\n", s2)
 	fmt.Println("通过var s2 []int创建的slice是不是nil: ", s2 == nil)
@@ -15,6 +17,7 @@ func main() {
 	fmt.Printf("s4: %#v\n", s4)
 	fmt.Printf("由make加上长度参数创建的切片的容量是: %+v 长度是: %v\n", cap(s4), len(s4))
 	s2 = append(s2, 1)
+	fmt.Printf("s5: %#v\n", s5)
 	fmt.Printf("append后, s2: %#v\n", s2)
 }
 

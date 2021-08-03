@@ -20,7 +20,27 @@ func main() {
 	// -----------------
 	iter_m := map[int]map[int]int{}
 	//iter_m[1][2] = 0
-	fmt.Println(iter_m[1])
+	fmt.Printf("%#v\n", iter_m[1])
+	iter_s := map[int][3]int{}
+	fmt.Printf("%#v\n", iter_s[1])
+	iter_p := map[int]sss{}
+	fmt.Printf("%#v\n", iter_p[1])
+
+	fmt.Println("********作为参数********")
+	k := map[int]int{1: 2, 4: 1}
+	fmt.Println("修改前", k)
+	change_map(k)
+	fmt.Println("修改后", k)
+
+}
+
+type sss struct {
+	mm int
+	kk []int
+}
+
+func change_map(m map[int]int) {
+	m[4] = 100
 }
 
 /*
@@ -31,4 +51,7 @@ Conclusion:
 	4. 申明map后, map是nil, 不能直接进行赋值操作, 需要初始化, 这很不方便(可以用{}初始化)
 	5. map的增删改查 TODO https://blog.csdn.net/lengyue1084/article/details/105955629
 	6. delete(map, key)函数可以删除键值对
+	7. 如果map没有一个键, 那么搜索的结果是什么?  根据情况, 如果是切片和字典, 返回的是nil, 如果是数组, 将会返回一个初始化的数组(全0)
+	   如果是结构体, 将会返回一个全部是初始值的结构体实例
+	8. map作为值传递是传值还是传址? 传址
 */

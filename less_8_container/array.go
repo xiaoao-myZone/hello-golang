@@ -17,8 +17,13 @@ func main() {
 	var drr = [5]int{1, 2, 3, 4} // 注意这种初始化的不同之处, 从左至右初始化, 不够的保持默认初始值
 	fmt.Println(drr)
 
+	// a := 5
+	// var prr = [a]int{1, 2, 3, 4} // 注意这种初始化的不同之处, 从左至右初始化, 不够的保持默认初始值
+	// fmt.Println(prr)
+	//与C一样， 数组初始化长度必须是整形
+
 	fmt.Println("*******************")
-	var srr = [...]string{"yes", "no", "hi"}
+	var srr = [...]string{"yes", "no", "hi"} //注意字符串数组的特殊声明方式
 	fmt.Println(srr)
 	fmt.Printf("%#v\n", srr)
 
